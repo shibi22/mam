@@ -4,35 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photos</title>
+    <link rel="stylesheet" href="photo.css">
     <style>
         body {
             margin: 0;
             padding: 0;
         }
-        .img {
+       .img {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             width: 100%;
             height: 100vh;
         }
-        .img div {
+       .img div {
             width: calc(33.33% - 20px);
             margin: 10px;
             display: inline-block;
             margin-top: 20px; /* added top margin */
             margin-bottom: 20px; /* added bottom margin */
         }
-        .img img {
+       .img img {
             width: 100%;
             height: 360px;
             object-fit: cover;
             border-radius: 10px;
         }
         @media only screen and (max-width: 768px) {
-           .img div {
+          .img div {
                 width: calc(50% - 20px);
             }
+        }
+        /* Add styles for lyrics display */
+       .lyrics {
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            color: #333;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 20px;
+        }
+       .lyrics span {
+            display: block;
+        }
+       .lyrics span.active {
+            color: #337ab7;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -59,5 +78,25 @@
         </div>
         <!-- Add more images as needed -->
     </div>
-</body>
-</html>
+    <div class="lyrics">
+        
+     <!---   <span>Today is all about you</span>
+        <span>Kavitha mam it's true</span>
+        <span>We celebrate your day</span>
+        <span>In every single way</span>
+
+        
+        <span>Candles on the cake</span>
+        <span>Wishes we will make</span>
+        <span>Gifts and smiles around</span>
+        <span>Happiness we've found</span>
+
+       
+        <span>Happy birthday Kavitha</span> -->
+     
+    </div>
+    <audio id="audio" controls>
+      <source src="./song.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+
